@@ -4,7 +4,7 @@ export const SizeOptions = async () => {
     const response = await fetch("http://localhost:8088/sizes")
     const sizes = await response.json()
 
-    //listens for change to the metals that are clicked
+    //listens for change to the sizes that are clicked
     document.addEventListener("change", handleSizeChange)
 
     // Use .map() to generate new array of strings

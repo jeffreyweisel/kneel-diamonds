@@ -1,8 +1,8 @@
 // Set up the transient state data structure and provide initial values
 const transientState = {
-    "styleId": "",
-    "metalId": "",
-    "sizeId": 0
+    "styleId": 0,
+    "metalId": 0,
+    "sizeId": 0,
 }
 
 
@@ -33,7 +33,7 @@ export const saveJewleryChoice = async () => {
         body: JSON.stringify(transientState)
     }
 
-    const response = await fetch ("http://localhost:8088/orders", postOptions)
+    const response = await fetch("http://localhost:8088/orders", postOptions)
 
     const customEvent = new CustomEvent("newJewleryChoiceAdded")
     document.dispatchEvent(customEvent)

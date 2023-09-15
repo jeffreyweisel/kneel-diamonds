@@ -7,12 +7,12 @@ export const MetalOptions = async () => {
     //listens for change to the metals that are clicked
     document.addEventListener("change", handleMetalChange)
 
-    
+
 
     // Use .map() to generate new array of strings
     const metalsArray = metals.map(
         (metal) => {
-          return `<div>
+            return `<div>
               <input type='radio' name='metal' value='${metal.id}' /> ${metal.metal}
           </div>`
         }
@@ -27,7 +27,7 @@ export const MetalOptions = async () => {
 
 //Handles what happens when different metals are clicked    
 const handleMetalChange = (changeEvent) => {
-        if (changeEvent.target.name === "metal") {
-            setMetal(parseInt(changeEvent.target.value))
-        }
+    if (changeEvent.target.name === "metal") {
+        setMetal(parseInt(changeEvent.target.value))
     }
+}

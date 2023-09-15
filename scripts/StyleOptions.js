@@ -6,13 +6,13 @@ export const StyleOptions = async () => {
 
     //listens for change to the styles that are clicked
     document.addEventListener("change", handleStyleChange)
-    
-    
+
+
 
     // Use .map() to generate new array of strings
     const stylesArray = styles.map(
         (style) => {
-          return `<div>
+            return `<div>
               <input type='radio' name='style' value='${style.id}' /> ${style.style}
           </div>`
         }
